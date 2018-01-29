@@ -1,0 +1,24 @@
+#update svn v955
+#release for HF
+
+make version
+chmod +x util/*.pl
+chmod +x util/*.exe
+chmod +x util/gen_checksum
+util/gen_mac_bin.exe 00-23-45-67-89-99
+
+#cp -f Makefile.hf Makefile.mk
+#rm -f Makefile.hf
+#rm -f Makefile.gen
+rm -rf .svn
+
+grep -v '/bin/rm' icomlib/Makefile > icomlib/Makefile.tmp
+mv icomlib/Makefile.tmp icomlib/Makefile
+
+make
+
+if [ -f "ssv6060-main.bin" ]; then
+	rm -rf icomlib/wifi
+fi
+
+

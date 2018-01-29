@@ -1,0 +1,10 @@
+#auto maek
+
+make version
+chmod +x util/*.pl
+chmod +x util/*.exe
+chmod +x util/gen_checksum
+util/gen_mac_bin.exe 00-23-45-67-89-99
+
+make
+

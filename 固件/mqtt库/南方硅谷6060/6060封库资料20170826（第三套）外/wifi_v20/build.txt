@@ -1,0 +1,151 @@
+make -C icomlib
+make[1]: Entering directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/icomlib'
+make icomlib.a
+make[2]: Entering directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/icomlib'
+-----------------make z1 target:objs/platform/dll_array.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__SZCLOUD_SUPPORT__ -D__CUSTOMER_SZ__=SZ -D__CUSTOMER__=SZ -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_SZCLOUD____ -D____D_UA_KEY_DEMO_SUPPORT____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I./ -I./include -I./include/net -I./include/bsp -I./include/lib -I./include/net/ieee80211_bss -I./include/sys -I./include/net/mac -I./include/dev -I./include/matrixssl -I./include/cloud -I../include -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DFUNC_OTA_ON=1 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_SSV_SMART_ON=1 -DFUNC_AIRKISS_ON=0 -DFUNC_JDSMART_ON=0 -DFUNC_DLL_ON=0			 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c platform/dll_array.c -o objs/platform/dll_array.o
+echo "ar rcf icomlib.a objs/encrypt_sw/arc4.o objs/encrypt_sw/md5.o objs/encrypt_sw/wep.o objs/os/autostart.o objs/os/ctimer.o objs/os/etimer.o objs/os/printf.o objs/os/process.o objs/os/shell-ping.o objs/os/random.o objs/os/timer.o objs/os/symtab.o objs/os/elfloader-arm.o objs/os/empty-symbols.o objs/os/elfloader.o objs/platform/dll_array.o objs/platform/atcmdlib.o objs/platform/atcmd_icomm.o objs/platform/boot-hiflying.o objs/platform/clock.o objs/platform/console.o objs/platform/contiki-main.o objs/platform/dll_init.o objs/platform/debug-uart.o objs/platform/drv_fence.o objs/platform/drv_flash.o objs/platform/drv_gpio.o objs/platform/gpio_api.o objs/platform/drv_pmu.o objs/platform/drv_pwm.o objs/platform/pwm_api.o objs/platform/drv_timer.o objs/platform/drv_uart.o objs/platform/serial_api.o objs/platform/drv_wdog.o objs/platform/i2c.o objs/platform/fence.o objs/platform/flash_api.o objs/platform/hw_init.o objs/platform/hw_regs_api.o objs/platform/smartComm.o objs/platform/ssv_lib.o objs/platform/ssv_lib_slow.o objs/platform/swpwm.o objs/platform/systemconf.o objs/platform/userSmart.o objs/platform/wdog_api.o objs/platform/time.o objs/smartConf/smartSetting.o objs/smartConf/smartConf.o objs/wifi/bsp.o objs/wifi/crypthw.o objs/wifi/dbg-atcmd-api.o objs/wifi/drv_mac.o objs/wifi/drv_mbox.o objs/wifi/drv_phy.o objs/wifi/drv_pktbuf.o objs/wifi/drv_pktbuf_slow.o objs/wifi/EAPOL.o objs/wifi/hash_alg.o objs/wifi/hmac_md5.o objs/wifi/hmac_sha1.o objs/wifi/ieee80211_mac.o objs/wifi/ieee80211_mgmt.o objs/wifi/ieee80211_net.o objs/wifi/ieee80211_rdc.o objs/wifi/irq.o objs/wifi/netstack.o objs/wifi/powersave.o objs/wifi/rate_control.o objs/wifi/sha1.o objs/wifi/soft_ap.o objs/wifi/ssv6200_rx.o objs/wifi/ssv6200_tx.o objs/wifi/ssvradio.o objs/wifi/wpa.o objs/export_api/sys_status_api.o objs/export_api/ssl_api.o objs/matrixssl/osdep.o objs/matrixssl/corelib.o objs/matrixssl/prng.o objs/matrixssl/yarrow.o objs/matrixssl/aes.o objs/matrixssl/aesGCM.o objs/matrixssl/des3.o objs/matrixssl/seed.o objs/matrixssl/arc4.o objs/matrixssl/rc2.o objs/matrixssl/idea.o objs/matrixssl/sha1ssl.o objs/matrixssl/sha256.o objs/matrixssl/sha224.o objs/matrixssl/sha384.o objs/matrixssl/sha512.o objs/matrixssl/md4.o objs/matrixssl/md2.o objs/matrixssl/hmac.o objs/matrixssl/aesni.o objs/matrixssl/pstm.o objs/matrixssl/pstmmonreduce.o objs/matrixssl/pstmsqrcomba.o objs/matrixssl/pstmmulcomba.o objs/matrixssl/pubkey.o objs/matrixssl/rsa.o objs/matrixssl/ecc.o objs/matrixssl/dh.o objs/matrixssl/pkcs.o objs/matrixssl/asn1.o objs/matrixssl/base64.o objs/matrixssl/x509.o objs/matrixssl/prf.o objs/matrixssl/sslv3.o objs/matrixssl/tls.o objs/matrixssl/dtls.o objs/matrixssl/psk.o objs/matrixssl/cipherSuite.o objs/matrixssl/hsHash.o objs/matrixssl/matrixssl.o objs/matrixssl/matrixsslApi.o objs/matrixssl/sslDecode.o objs/matrixssl/sslEncode.o"
+ar rcf icomlib.a objs/encrypt_sw/arc4.o objs/encrypt_sw/md5.o objs/encrypt_sw/wep.o objs/os/autostart.o objs/os/ctimer.o objs/os/etimer.o objs/os/printf.o objs/os/process.o objs/os/shell-ping.o objs/os/random.o objs/os/timer.o objs/os/symtab.o objs/os/elfloader-arm.o objs/os/empty-symbols.o objs/os/elfloader.o objs/platform/dll_array.o objs/platform/atcmdlib.o objs/platform/atcmd_icomm.o objs/platform/boot-hiflying.o objs/platform/clock.o objs/platform/console.o objs/platform/contiki-main.o objs/platform/dll_init.o objs/platform/debug-uart.o objs/platform/drv_fence.o objs/platform/drv_flash.o objs/platform/drv_gpio.o objs/platform/gpio_api.o objs/platform/drv_pmu.o objs/platform/drv_pwm.o objs/platform/pwm_api.o objs/platform/drv_timer.o objs/platform/drv_uart.o objs/platform/serial_api.o objs/platform/drv_wdog.o objs/platform/i2c.o objs/platform/fence.o objs/platform/flash_api.o objs/platform/hw_init.o objs/platform/hw_regs_api.o objs/platform/smartComm.o objs/platform/ssv_lib.o objs/platform/ssv_lib_slow.o objs/platform/swpwm.o objs/platform/systemconf.o objs/platform/userSmart.o objs/platform/wdog_api.o objs/platform/time.o objs/smartConf/smartSetting.o objs/smartConf/smartConf.o objs/wifi/bsp.o objs/wifi/crypthw.o objs/wifi/dbg-atcmd-api.o objs/wifi/drv_mac.o objs/wifi/drv_mbox.o objs/wifi/drv_phy.o objs/wifi/drv_pktbuf.o objs/wifi/drv_pktbuf_slow.o objs/wifi/EAPOL.o objs/wifi/hash_alg.o objs/wifi/hmac_md5.o objs/wifi/hmac_sha1.o objs/wifi/ieee80211_mac.o objs/wifi/ieee80211_mgmt.o objs/wifi/ieee80211_net.o objs/wifi/ieee80211_rdc.o objs/wifi/irq.o objs/wifi/netstack.o objs/wifi/powersave.o objs/wifi/rate_control.o objs/wifi/sha1.o objs/wifi/soft_ap.o objs/wifi/ssv6200_rx.o objs/wifi/ssv6200_tx.o objs/wifi/ssvradio.o objs/wifi/wpa.o objs/export_api/sys_status_api.o objs/export_api/ssl_api.o objs/matrixssl/osdep.o objs/matrixssl/corelib.o objs/matrixssl/prng.o objs/matrixssl/yarrow.o objs/matrixssl/aes.o objs/matrixssl/aesGCM.o objs/matrixssl/des3.o objs/matrixssl/seed.o objs/matrixssl/arc4.o objs/matrixssl/rc2.o objs/matrixssl/idea.o objs/matrixssl/sha1ssl.o objs/matrixssl/sha256.o objs/matrixssl/sha224.o objs/matrixssl/sha384.o objs/matrixssl/sha512.o objs/matrixssl/md4.o objs/matrixssl/md2.o objs/matrixssl/hmac.o objs/matrixssl/aesni.o objs/matrixssl/pstm.o objs/matrixssl/pstmmonreduce.o objs/matrixssl/pstmsqrcomba.o objs/matrixssl/pstmmulcomba.o objs/matrixssl/pubkey.o objs/matrixssl/rsa.o objs/matrixssl/ecc.o objs/matrixssl/dh.o objs/matrixssl/pkcs.o objs/matrixssl/asn1.o objs/matrixssl/base64.o objs/matrixssl/x509.o objs/matrixssl/prf.o objs/matrixssl/sslv3.o objs/matrixssl/tls.o objs/matrixssl/dtls.o objs/matrixssl/psk.o objs/matrixssl/cipherSuite.o objs/matrixssl/hsHash.o objs/matrixssl/matrixssl.o objs/matrixssl/matrixsslApi.o objs/matrixssl/sslDecode.o objs/matrixssl/sslEncode.o
+ar rcf icomlib.a objs/encrypt_sw/arc4.o objs/encrypt_sw/md5.o objs/encrypt_sw/wep.o objs/os/autostart.o objs/os/ctimer.o objs/os/etimer.o objs/os/printf.o objs/os/process.o objs/os/shell-ping.o objs/os/random.o objs/os/timer.o objs/os/symtab.o objs/os/elfloader-arm.o objs/os/empty-symbols.o objs/os/elfloader.o objs/platform/dll_array.o objs/platform/atcmdlib.o objs/platform/atcmd_icomm.o objs/platform/boot-hiflying.o objs/platform/clock.o objs/platform/console.o objs/platform/contiki-main.o objs/platform/dll_init.o objs/platform/debug-uart.o objs/platform/drv_fence.o objs/platform/drv_flash.o objs/platform/drv_gpio.o objs/platform/gpio_api.o objs/platform/drv_pmu.o objs/platform/drv_pwm.o objs/platform/pwm_api.o objs/platform/drv_timer.o objs/platform/drv_uart.o objs/platform/serial_api.o objs/platform/drv_wdog.o objs/platform/i2c.o objs/platform/fence.o objs/platform/flash_api.o objs/platform/hw_init.o objs/platform/hw_regs_api.o objs/platform/smartComm.o objs/platform/ssv_lib.o objs/platform/ssv_lib_slow.o objs/platform/swpwm.o objs/platform/systemconf.o objs/platform/userSmart.o objs/platform/wdog_api.o objs/platform/time.o objs/smartConf/smartSetting.o objs/smartConf/smartConf.o objs/wifi/bsp.o objs/wifi/crypthw.o objs/wifi/dbg-atcmd-api.o objs/wifi/drv_mac.o objs/wifi/drv_mbox.o objs/wifi/drv_phy.o objs/wifi/drv_pktbuf.o objs/wifi/drv_pktbuf_slow.o objs/wifi/EAPOL.o objs/wifi/hash_alg.o objs/wifi/hmac_md5.o objs/wifi/hmac_sha1.o objs/wifi/ieee80211_mac.o objs/wifi/ieee80211_mgmt.o objs/wifi/ieee80211_net.o objs/wifi/ieee80211_rdc.o objs/wifi/irq.o objs/wifi/netstack.o objs/wifi/powersave.o objs/wifi/rate_control.o objs/wifi/sha1.o objs/wifi/soft_ap.o objs/wifi/ssv6200_rx.o objs/wifi/ssv6200_tx.o objs/wifi/ssvradio.o objs/wifi/wpa.o objs/export_api/sys_status_api.o objs/export_api/ssl_api.o objs/matrixssl/osdep.o objs/matrixssl/corelib.o objs/matrixssl/prng.o objs/matrixssl/yarrow.o objs/matrixssl/aes.o objs/matrixssl/aesGCM.o objs/matrixssl/des3.o objs/matrixssl/seed.o objs/matrixssl/arc4.o objs/matrixssl/rc2.o objs/matrixssl/idea.o objs/matrixssl/sha1ssl.o objs/matrixssl/sha256.o objs/matrixssl/sha224.o objs/matrixssl/sha384.o objs/matrixssl/sha512.o objs/matrixssl/md4.o objs/matrixssl/md2.o objs/matrixssl/hmac.o objs/matrixssl/aesni.o objs/matrixssl/pstm.o objs/matrixssl/pstmmonreduce.o objs/matrixssl/pstmsqrcomba.o objs/matrixssl/pstmmulcomba.o objs/matrixssl/pubkey.o objs/matrixssl/rsa.o objs/matrixssl/ecc.o objs/matrixssl/dh.o objs/matrixssl/pkcs.o objs/matrixssl/asn1.o objs/matrixssl/base64.o objs/matrixssl/x509.o objs/matrixssl/prf.o objs/matrixssl/sslv3.o objs/matrixssl/tls.o objs/matrixssl/dtls.o objs/matrixssl/psk.o objs/matrixssl/cipherSuite.o objs/matrixssl/hsHash.o objs/matrixssl/matrixssl.o objs/matrixssl/matrixsslApi.o objs/matrixssl/sslDecode.o objs/matrixssl/sslEncode.o
+make[2]: Leaving directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/icomlib'
+make[1]: Leaving directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/icomlib'
+make -C icomapps
+make[1]: Entering directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/icomapps'
+rm -f 
+make icomapps.a
+make[2]: Entering directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/icomapps'
+make[2]: `icomapps.a' is up to date.
+make[2]: Leaving directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/icomapps'
+make[1]: Leaving directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/icomapps'
+make -C contikilib
+make[1]: Entering directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/contikilib'
+make contikilib.a
+make[2]: Entering directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/contikilib'
+make[2]: `contikilib.a' is up to date.
+make[2]: Leaving directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/contikilib'
+make[1]: Leaving directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/contikilib'
+make -C dllapps
+make[1]: Entering directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/dllapps'
+make dll.elf 
+make[2]: Entering directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/dllapps'
+make[2]: `dll.elf' is up to date.
+make[2]: Leaving directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/dllapps'
+make[1]: Leaving directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/dllapps'
+#make -C user_files
+make ssv6060-main.bin
+make[1]: Entering directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20'
+# WARNING: if you need math.h. You need to add -lm into this linking stage.Please reference where -lm being added
+#arm-none-eabi-gcc --specs=nosys.specs --specs=nano.specs -flto -Wl,-Tcabrio.lds -flto -Xlinker -M -Xlinker -Map=contiki-cabrio.map -nostartfiles boot.s relocate.s -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__SZCLOUD_SUPPORT__ -D__CUSTOMER_SZ__=SZ -D__CUSTOMER__=SZ -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_SZCLOUD____ -D____D_UA_KEY_DEMO_SUPPORT____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I./icomlib/include -I./icomlib/include/net -I./icomlib/include/bsp -I./icomlib/include/net/ieee80211_bss -I./icomlib/include/sys -I./icomlib/include/net/mac -I./icomlib/include/dev  -I./icomlib/include/matrixssl -I./include -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -DAUTOSTART_ENABLE ssv6060-main.o relocate.s icomlib/icomlib.a icomapps/icomapps.a contikilib/contikilib.a -lc icomlib/icomlib.a icomapps/icomapps.a contikilib/contikilib.a -lm -o ssv6060-main.elf -L ./thirdPartyLib -lairkiss
+#/bin/cp user_files/libdtlib.a .
+/bin/cp icomlib/icomlib.a . ### use cp to copy library or the linker script will have problem for hierachy issue ###
+/bin/cp icomapps/icomapps.a . ### use cp to copy library or the linker script will have problem for hierachy issue ###
+/bin/cp contikilib/contikilib.a . ### use cp to copy library or the linker script will have problem for hierachy issue ###
+arm-none-eabi-gcc --specs=nosys.specs --specs=nano.specs -flto -Wl,-Tcabrio.lds -flto -Xlinker -M -Xlinker -Map=contiki-cabrio.map -nostartfiles boot.s relocate.s -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__SZCLOUD_SUPPORT__ -D__CUSTOMER_SZ__=SZ -D__CUSTOMER__=SZ -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_SZCLOUD____ -D____D_UA_KEY_DEMO_SUPPORT____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I./icomlib/include -I./icomlib/include/net -I./icomlib/include/bsp -I./icomlib/include/net/ieee80211_bss -I./icomlib/include/sys -I./icomlib/include/net/mac -I./icomlib/include/dev  -I./icomlib/include/matrixssl -I./include -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -DAUTOSTART_ENABLE ssv6060-main.o icomlib.a icomapps.a contikilib.a icomlib.a  -o ssv6060-main.elf -L ./thirdPartyLib -lairkiss -ldtlib
+echo "LAST_PROJECT = UA402_SZCLOUD" > ./Prj.tmp
+rm -f ssv6060_mac.hex
+make[2]: Entering directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/util'
+./gen_mac_bin.exe 90-22-33-44-55-66
+create hex file
+
+MAC addr:90-22-33-44-55-66
+make[2]: Leaving directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/util'
+-----------------make 3 target:ssv6060-main.bin 1st-dep:ssv6060-main.elf -----------------
+arm-none-eabi-objcopy -O binary ssv6060-main.elf ssv6060-main.bin
+-e 
+-----Check bin file size:(ssv6060-main.bin)----->>>
+echo test `stat -c %s ssv6060-main.bin` -lt 475136	###acceptable if < 475136###
+test 403312 -lt 475136
+test `stat -c %s ssv6060-main.bin` -lt 475136	###acceptable if < 475136###
+-----Done:bin file size:ok-----<<<
+-----Generate bin for uart-upgrade-----
+dd skip=16384 if=ssv6060-main.bin of=ssv6060-main_os.bin bs=1
+dd skip=0 count=8192 if=ssv6060-main.bin of=boot_tmp.bin bs=1
+cat boot_tmp.bin ssv6060_mac.hex ssv6060-main_os.bin > ssv6060-main.bin
+<----------------------check sram usage---------------------->(read dump.log by ./util/rpt_sram_usage.pl)
+Idx Name          Size      VMA       LMA
+  2 prog_in_sram  00016a38  02000000  0304a708  00060000  2**2
+  3 .ARM          00000008  02016a38  03061140  00076a38  2**2
+  4 .data         00001628  02016a40  03061148  00076a40  2**3
+  5 .bss          0000d1e0  02018070  03062778  00078068  2**4
+  6 boot_in_sram  00000d40  02029000  03000190  00009000  2**2
+  7 .boot_data    00000010  0202c000  03000ed0  0000c000  2**2
+  8 .boot_bss     00001400  0202c010  03000ee0  0000c010  2**2
+
+-------------------------SRAM report-------------------------
+sram total  ----------->   192 KB
+sram in use ----------->   156 KB
+sram free   ----------->    31 KB
+
+
+-rwxrwxr-x 1 user user  403312  8月 26 16:51 ssv6060-main.bin
+-rwxrwxr-x 1 user user 1905661  8月 26 16:51 ssv6060-main.elf
+make[2]: Entering directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20'
+make[3]: Entering directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/util'
+echo CFLAGS = -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__SZCLOUD_SUPPORT__ -D__CUSTOMER_SZ__=SZ -D__CUSTOMER__=SZ -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_SZCLOUD____ -D____D_UA_KEY_DEMO_SUPPORT____ -D____D_Module_IO_Indicator____ -I../core/sys/ -I../platform/cabrio-e -I../core/net -I../core -I../include -I../cpu/cabrio-e
+CFLAGS = -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__SZCLOUD_SUPPORT__ -D__CUSTOMER_SZ__=SZ -D__CUSTOMER__=SZ -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_SZCLOUD____ -D____D_UA_KEY_DEMO_SUPPORT____ -D____D_Module_IO_Indicator____ -I../core/sys/ -I../platform/cabrio-e -I../core/net -I../core -I../include -I../cpu/cabrio-e
+gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__SZCLOUD_SUPPORT__ -D__CUSTOMER_SZ__=SZ -D__CUSTOMER__=SZ -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_SZCLOUD____ -D____D_UA_KEY_DEMO_SUPPORT____ -D____D_Module_IO_Indicator____ -I../core/sys/ -I../platform/cabrio-e -I../core/net -I../core -I../include -I../cpu/cabrio-e print_layout.c -DMODULE_ID=5 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -o print_layout.exe
+
+<FLASH layout>
+FUNC_OTA_ON = 1
+TOTAL FLASH SIZE = 1024 KB
+----------------------------------------
+|                                      |
+|       BOOT_SECTOR ADDR = 0x3000000   | 
+|       SIZE = 8(KB)                   | 
+----------------------------------------
+|                                      |
+|       MP ADDR = 0x3002000            | 
+|       SIZE = 4(KB)                   | 
+----------------------------------------
+|                                      |
+|       CONFIG ADDR = 0x3003000        | 
+|       SIZE = 4(KB)                   | 
+----------------------------------------
+|                                      |
+|       IMAGE0 ADDR = 0x3004000        | 
+|       SIZE = 464(KB)                 | 
+----------------------------------------
+|                                      |
+|       IMAGE1 ADDR = 0x3078000        | 
+|       SIZE = 464(KB)                 | 
+----------------------------------------
+|                                      |
+|       CUSTOMER ADDR = 0x30ec000      | 
+|       SIZE = 16(KB)                  | 
+----------------------------------------
+|                                      |
+|       FILE_SYSTEM ADDR = 0x30f0000   | 
+|       SIZE = 64(KB)                  | 
+----------------------------------------
+
+<SRAM layout>
+TOTAL_SRAM_SIZE = 192 KB
+----------------------------------------
+|                                      |
+|       BOOT SECTOR ADDR = 0x2000000   | 
+|       SIZE = 4(KB)                   | 
+----------------------------------------
+|                                      |
+|       OS ADDR = 0x2001000            | 
+|       SIZE = 181(KB)                 | 
+----------------------------------------
+|                                      |
+|       NORMAL STACK ADDR = 0x202e780  | 
+|       SIZE = 4(KB)                   | 
+----------------------------------------
+|                                      |
+|       IRQ STACK ADDR = 0x202f780     | 
+|       SIZE = 1(KB)                   | 
+----------------------------------------
+make[3]: Leaving directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20/util'
+make[2]: Leaving directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20'
+make[2]: Entering directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20'
+make[2]: Leaving directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20'
+#############################################################
+### You can use 'make asm' to generate dis-assembly file!!###
+#############################################################
+2017年 08月 26日 星期六 16:51:10 CST
+Project = UA402_SZCLOUD - Debug
+-----------------------------------
+Done!
+make[1]: Leaving directory `/home/user/workspace/hf120_develop_dir/hf120_develop_directory/wifi_szcloud_sdk_lib_for_out/wifi_szcloud_sdk_20170802_new/wifi_v20'

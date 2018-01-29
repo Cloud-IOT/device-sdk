@@ -1,0 +1,682 @@
+make -C icomlib
+make[1]: Entering directory `/home/qin/projects/latest/Release_v1127/icomlib'
+make icomlib.a
+make[2]: Entering directory `/home/qin/projects/latest/Release_v1127/icomlib'
+make[2]: `icomlib.a' is up to date.
+make[2]: Leaving directory `/home/qin/projects/latest/Release_v1127/icomlib'
+make[1]: Leaving directory `/home/qin/projects/latest/Release_v1127/icomlib'
+make -C icomapps
+make[1]: Entering directory `/home/qin/projects/latest/Release_v1127/icomapps'
+make icomapps.a
+make[2]: Entering directory `/home/qin/projects/latest/Release_v1127/icomapps'
+-----------------make z1 target:objs/tuya_http_inf.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include  -I../icomlib/include/sys -I../icomlib/include/dev -I../icomlib/include/net -I../icomlib/include/net/mac -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/matrixssl  -I../icomlib/include/cloud -I../contikilib -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DFUNC_OTA_ON=1 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DENABLE_ICOMM_DEMO=0 -DFUNC_CLOUD_ON=0 -DFUNC_SEND_RAW_DATA_ON=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c tuya_http_inf.c -o objs/tuya_http_inf.o
+tuya_http_inf.c: In function 'tuya_httpclient_device_create':
+tuya_http_inf.c:644:3: warning: pointer targets in passing argument 1 of 'tuya_httpclient_send' differ in signedness [-Wpointer-sign]
+   tuya_httpclient_send(s_http_send_buf, strlen(s_http_send_buf));
+   ^
+tuya_http_inf.c:581:23: note: expected 'uint8_t *' but argument is of type 'char *'
+ int ICACHE_FLASH_ATTR tuya_httpclient_send(uint8_t *buf, int len)
+                       ^
+tuya_http_inf.c: In function 'tuya_httpclient_device_active':
+tuya_http_inf.c:660:3: warning: pointer targets in passing argument 1 of 'tuya_httpclient_send' differ in signedness [-Wpointer-sign]
+   tuya_httpclient_send(s_http_send_buf, strlen(s_http_send_buf));
+   ^
+tuya_http_inf.c:581:23: note: expected 'uint8_t *' but argument is of type 'char *'
+ int ICACHE_FLASH_ATTR tuya_httpclient_send(uint8_t *buf, int len)
+                       ^
+tuya_http_inf.c: In function 'tuya_httpclient_device_reset':
+tuya_http_inf.c:676:3: warning: pointer targets in passing argument 1 of 'tuya_httpclient_send' differ in signedness [-Wpointer-sign]
+   tuya_httpclient_send(s_http_send_buf, strlen(s_http_send_buf));
+   ^
+tuya_http_inf.c:581:23: note: expected 'uint8_t *' but argument is of type 'char *'
+ int ICACHE_FLASH_ATTR tuya_httpclient_send(uint8_t *buf, int len)
+                       ^
+tuya_http_inf.c: In function 'tuya_httpclient_device_exist':
+tuya_http_inf.c:693:3: warning: pointer targets in passing argument 1 of 'tuya_httpclient_send' differ in signedness [-Wpointer-sign]
+   tuya_httpclient_send(s_http_send_buf, strlen(s_http_send_buf));
+   ^
+tuya_http_inf.c:581:23: note: expected 'uint8_t *' but argument is of type 'char *'
+ int ICACHE_FLASH_ATTR tuya_httpclient_send(uint8_t *buf, int len)
+                       ^
+tuya_http_inf.c: In function 'tuya_httpclient_get':
+tuya_http_inf.c:710:3: warning: pointer targets in passing argument 1 of 'tuya_httpclient_send' differ in signedness [-Wpointer-sign]
+   tuya_httpclient_send(s_http_send_buf, strlen(s_http_send_buf));
+   ^
+tuya_http_inf.c:581:23: note: expected 'uint8_t *' but argument is of type 'char *'
+ int ICACHE_FLASH_ATTR tuya_httpclient_send(uint8_t *buf, int len)
+                       ^
+tuya_http_inf.c: In function 'tuya_httpclient_upgrade_get':
+tuya_http_inf.c:727:3: warning: pointer targets in passing argument 1 of 'tuya_httpclient_send' differ in signedness [-Wpointer-sign]
+   tuya_httpclient_send(s_http_send_buf, strlen(s_http_send_buf));
+   ^
+tuya_http_inf.c:581:23: note: expected 'uint8_t *' but argument is of type 'char *'
+ int ICACHE_FLASH_ATTR tuya_httpclient_send(uint8_t *buf, int len)
+                       ^
+tuya_http_inf.c: At top level:
+tuya_http_inf.c:571:31: warning: 'httpclient_conn_cb' defined but not used [-Wunused-function]
+ static void ICACHE_FLASH_ATTR httpclient_conn_cb(void *arg)
+                               ^
+tuya_http_inf.c:566:31: warning: 'httpclient_discon_cb' defined but not used [-Wunused-function]
+ static void ICACHE_FLASH_ATTR httpclient_discon_cb(void *arg)
+                               ^
+tuya_http_inf.c:162:31: warning: 'connect_timeout_func' defined but not used [-Wunused-function]
+ static void ICACHE_FLASH_ATTR connect_timeout_func(void *timer_arg)
+                               ^
+tuya_http_inf.c:167:31: warning: 'dns_check' defined but not used [-Wunused-function]
+ static void ICACHE_FLASH_ATTR dns_check(void *timer_arg)
+                               ^
+tuya_http_inf.c:561:31: warning: 'httpclient_sent_cb' defined but not used [-Wunused-function]
+ static void ICACHE_FLASH_ATTR httpclient_sent_cb(void *arg)
+                               ^
+tuya_http_inf.c:576:31: warning: 'httpclient_recon_cb' defined but not used [-Wunused-function]
+ static void ICACHE_FLASH_ATTR httpclient_recon_cb(void *arg, sint8 errType)
+                               ^
+-----------------make z1 target:objs/tuya_md5.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include  -I../icomlib/include/sys -I../icomlib/include/dev -I../icomlib/include/net -I../icomlib/include/net/mac -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/matrixssl  -I../icomlib/include/cloud -I../contikilib -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DFUNC_OTA_ON=1 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DENABLE_ICOMM_DEMO=0 -DFUNC_CLOUD_ON=0 -DFUNC_SEND_RAW_DATA_ON=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c tuya_md5.c -o objs/tuya_md5.o
+-----------------make z1 target:objs/MyThread.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include  -I../icomlib/include/sys -I../icomlib/include/dev -I../icomlib/include/net -I../icomlib/include/net/mac -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/matrixssl  -I../icomlib/include/cloud -I../contikilib -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DFUNC_OTA_ON=1 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DENABLE_ICOMM_DEMO=0 -DFUNC_CLOUD_ON=0 -DFUNC_SEND_RAW_DATA_ON=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c MyThread.c -o objs/MyThread.o
+MyThread.c: In function 'F_FMTest_SetOpt':
+MyThread.c:449:2: warning: enumeration value 'E_FMTest_Opt_Max' not handled in switch [-Wswitch]
+   case E_FMTest_Opt_Dbg:
+  ^
+MyThread.c: In function 'F_SoftAP_SSID_Init':
+MyThread.c:517:2: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   sprintf(softap_ssid, D_szDefaultAP_SSID "%02X%02X%02X",
+  ^
+In file included from /usr/arm-none-eabi/include/ctype.h:4:0,
+                 from ../icomlib/include/contiki-conf.h:185,
+                 from ../icomlib/include/contiki.h:38,
+                 from MyThread.c:3:
+/usr/arm-none-eabi/include/string.h:28:6: note: expected 'const char *' but argument is of type 'S8 *'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+-----------------make z1 target:objs/MyATCmd.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include  -I../icomlib/include/sys -I../icomlib/include/dev -I../icomlib/include/net -I../icomlib/include/net/mac -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/matrixssl  -I../icomlib/include/cloud -I../contikilib -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DFUNC_OTA_ON=1 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DENABLE_ICOMM_DEMO=0 -DFUNC_CLOUD_ON=0 -DFUNC_SEND_RAW_DATA_ON=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c MyATCmd.c -o objs/MyATCmd.o
+MyATCmd.c:224:2: warning: initialization makes integer from pointer without a cast [enabled by default]
+  {D_NULL, 0, "Cust0"},
+  ^
+MyATCmd.c:224:2: warning: (near initialization for 'R_saDbgVal[0].dwAddr') [enabled by default]
+MyATCmd.c:225:2: warning: initialization makes integer from pointer without a cast [enabled by default]
+  {D_NULL, 0, "Cust1"},
+  ^
+MyATCmd.c:225:2: warning: (near initialization for 'R_saDbgVal[1].dwAddr') [enabled by default]
+MyATCmd.c:226:2: warning: initialization makes integer from pointer without a cast [enabled by default]
+  {D_NULL, 0, "Cust2"},
+  ^
+MyATCmd.c:226:2: warning: (near initialization for 'R_saDbgVal[2].dwAddr') [enabled by default]
+MyATCmd.c:227:2: warning: initialization makes integer from pointer without a cast [enabled by default]
+  {D_NULL, 0, "Cust3"},
+  ^
+MyATCmd.c:227:2: warning: (near initialization for 'R_saDbgVal[3].dwAddr') [enabled by default]
+MyATCmd.c: In function 'F_ATCmd_DbgVal':
+MyATCmd.c:275:6: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'void *' [-Wformat=]
+      i, p, iSize, dwVal, dwVal, R_saDbgVal[i].szName);
+      ^
+MyATCmd.c:285:6: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'void *' [-Wformat=]
+      i, p, iSize, R_saDbgVal[i].szName);
+      ^
+MyATCmd.c:299:24: warning: assignment makes integer from pointer without a cast [enabled by default]
+   R_saDbgVal[i].dwAddr = D_NULL;
+                        ^
+MyATCmd.c:313:5: warning: assignment makes pointer from integer without a cast [enabled by default]
+   p = strtoul(param->argv[2], NULL, 16);
+     ^
+MyATCmd.c:335:4: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'void *' [-Wformat=]
+    i, p, iSize, dwVal, dwVal, R_saDbgVal[i].szName);
+    ^
+MyATCmd.c:412:5: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'void *' [-Wformat=]
+     iIndex, p, iSize, dwVal, dwVal, R_saDbgVal[iIndex].szName);
+     ^
+-----------------make z1 target:objs/UAMisc.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include  -I../icomlib/include/sys -I../icomlib/include/dev -I../icomlib/include/net -I../icomlib/include/net/mac -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/matrixssl  -I../icomlib/include/cloud -I../contikilib -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DFUNC_OTA_ON=1 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DENABLE_ICOMM_DEMO=0 -DFUNC_CLOUD_ON=0 -DFUNC_SEND_RAW_DATA_ON=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c UAMisc.c -o objs/UAMisc.o
+-----------------make z1 target:objs/UAVersion.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include  -I../icomlib/include/sys -I../icomlib/include/dev -I../icomlib/include/net -I../icomlib/include/net/mac -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/matrixssl  -I../icomlib/include/cloud -I../contikilib -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DFUNC_OTA_ON=1 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DENABLE_ICOMM_DEMO=0 -DFUNC_CLOUD_ON=0 -DFUNC_SEND_RAW_DATA_ON=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c UAVersion.c -o objs/UAVersion.o
+-----------------make z1 target:objs/MyCustSave.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include  -I../icomlib/include/sys -I../icomlib/include/dev -I../icomlib/include/net -I../icomlib/include/net/mac -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/matrixssl  -I../icomlib/include/cloud -I../contikilib -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DFUNC_OTA_ON=1 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DENABLE_ICOMM_DEMO=0 -DFUNC_CLOUD_ON=0 -DFUNC_SEND_RAW_DATA_ON=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c MyCustSave.c -o objs/MyCustSave.o
+echo "ar rcf icomapps.a objs/atcmd.o objs/atcmd_ssl.o objs/atcmd_mqtt.o objs/bsp_info.o objs/iperf_cmd.o objs/socket_app.o objs/soft_ap_init.o objs/xmem.o objs/ota_api.o objs/tcp_server_demo.o objs/wifi_uart_demo.o objs/user_smart_demo.o objs/sta_connect_demo.o objs/data_buff.o objs/uart.o objs/uart_cmd.o objs/net.o objs/cJSON.o objs/hekr_cmd.o objs/hx_udp_client.o objs/hx_udp_server.o objs/hx_sta_conn.o objs/hx_flash_opt.o objs/tuya_chip_test.o objs/tuya_http.o objs/tuya_http_inf.o objs/base64.o objs/aes.o objs/tuya_md5.o objs/MyThread.o objs/MyATCmd.o objs/UAMisc.o objs/UAVersion.o objs/MyCustSave.o"
+ar rcf icomapps.a objs/atcmd.o objs/atcmd_ssl.o objs/atcmd_mqtt.o objs/bsp_info.o objs/iperf_cmd.o objs/socket_app.o objs/soft_ap_init.o objs/xmem.o objs/ota_api.o objs/tcp_server_demo.o objs/wifi_uart_demo.o objs/user_smart_demo.o objs/sta_connect_demo.o objs/data_buff.o objs/uart.o objs/uart_cmd.o objs/net.o objs/cJSON.o objs/hekr_cmd.o objs/hx_udp_client.o objs/hx_udp_server.o objs/hx_sta_conn.o objs/hx_flash_opt.o objs/tuya_chip_test.o objs/tuya_http.o objs/tuya_http_inf.o objs/base64.o objs/aes.o objs/tuya_md5.o objs/MyThread.o objs/MyATCmd.o objs/UAMisc.o objs/UAVersion.o objs/MyCustSave.o
+ar rcf icomapps.a objs/atcmd.o objs/atcmd_ssl.o objs/atcmd_mqtt.o objs/bsp_info.o objs/iperf_cmd.o objs/socket_app.o objs/soft_ap_init.o objs/xmem.o objs/ota_api.o objs/tcp_server_demo.o objs/wifi_uart_demo.o objs/user_smart_demo.o objs/sta_connect_demo.o objs/data_buff.o objs/uart.o objs/uart_cmd.o objs/net.o objs/cJSON.o objs/hekr_cmd.o objs/hx_udp_client.o objs/hx_udp_server.o objs/hx_sta_conn.o objs/hx_flash_opt.o objs/tuya_chip_test.o objs/tuya_http.o objs/tuya_http_inf.o objs/base64.o objs/aes.o objs/tuya_md5.o objs/MyThread.o objs/MyATCmd.o objs/UAMisc.o objs/UAVersion.o objs/MyCustSave.o
+make[2]: Leaving directory `/home/qin/projects/latest/Release_v1127/icomapps'
+make[1]: Leaving directory `/home/qin/projects/latest/Release_v1127/icomapps'
+make -C contikilib
+make[1]: Entering directory `/home/qin/projects/latest/Release_v1127/contikilib'
+make contikilib.a
+make[2]: Entering directory `/home/qin/projects/latest/Release_v1127/contikilib'
+-----------------make z1 target:objs/cfs-coffee.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c cfs-coffee.c -o objs/cfs-coffee.o
+cfs-coffee.c: In function 'icomm_cfs_dump_file_info':
+cfs-coffee.c:1179:15: warning: 'fdp' is used uninitialized in this function [-Wuninitialized]
+     fdp->file = find_file(name);
+               ^
+-----------------make z1 target:objs/dhcpc.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c dhcpc.c -o objs/dhcpc.o
+dhcpc.c: In function 'handle_dhcp':
+dhcpc.c:489:3: warning: statement with no effect [-Wunused-value]
+   s.state == STATE_INITIAL;
+   ^
+-----------------make z1 target:objs/dhcp_process.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c dhcp_process.c -o objs/dhcp_process.o
+-----------------make z1 target:objs/dhcps.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c dhcps.c -o objs/dhcps.o
+dhcps.c: In function 'get_leased_mac':
+dhcps.c:163:1: warning: label 'exit' defined but not used [-Wunused-label]
+ exit:  
+ ^
+dhcps.c: In function 'lookup_lease_ip':
+dhcps.c:288:1: warning: label 'exit' defined but not used [-Wunused-label]
+ exit:
+ ^
+dhcps.c: In function 'release_address_by_mac':
+dhcps.c:534:5: warning: format '%x' expects argument of type 'unsigned int', but argument 8 has type 'struct dhcps_client_lease *' [-Wformat=]
+     printf("release_address_by_mac  mac=%x:%x:%x:%x:%x:%x lease=0x%x\n",p_mac[0],p_mac[1],p_mac[2],p_mac[3],p_mac[4],p_mac[5],lease);
+     ^
+-----------------make z1 target:objs/list.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c list.c -o objs/list.o
+-----------------make z1 target:objs/mqtt.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c mqtt.c -o objs/mqtt.o
+mqtt.c: In function 'send_out_buffer':
+mqtt.c:303:11: warning: unused variable 'nResult' [-Wunused-variable]
+       int nResult = SSL_write(mqttssl, conn->out_buffer, conn->out_buffer_ptr - conn->out_buffer);
+           ^
+mqtt.c: In function 'mqtt_connect':
+mqtt.c:1366:10: warning: assignment from incompatible pointer type [enabled by default]
+   ipaddr = &ip6addr;
+          ^
+mqtt.c: In function 'process_thread_sslmqttproc':
+mqtt.c:1576:25: warning: pointer targets in passing argument 3 of 'tcp_input' differ in signedness [-Wpointer-sign]
+                         tcp_input(NULL, gconn, sslrecv, rc);
+                         ^
+mqtt.c:950:1: note: expected 'const uint8_t *' but argument is of type 'char *'
+ tcp_input(struct tcp_socket *s,
+ ^
+mqtt.c:1543:6: warning: unused variable 'k' [-Wunused-variable]
+  int k = 0;
+      ^
+-----------------make z1 target:objs/resolv.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c resolv.c -o objs/resolv.o
+resolv.c: In function 'newdata':
+resolv.c:1042:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     uip_ipaddr_copy(&namemapptr->ipaddr, (uip_ipaddr_t *) ans->ipaddr);
+     ^
+-----------------make z1 target:objs/simple-udp.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c simple-udp.c -o objs/simple-udp.o
+-----------------make z1 target:objs/socket_driver.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c socket_driver.c -o objs/socket_driver.o
+-----------------make z1 target:objs/tcp-socket.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c tcp-socket.c -o objs/tcp-socket.o
+tcp-socket.c: In function 'tcp_socket_connect':
+tcp-socket.c:300:3: warning: passing argument 1 of 'tcp_connect' discards 'const' qualifier from pointer target type [enabled by default]
+   s->c = tcp_connect(ipaddr, uip_htons(port), s);
+   ^
+In file included from ../icomlib/include/contiki-net.h:39:0,
+                 from tcp-socket.c:34:
+../icomlib/include/net/tcpip.h:177:23: note: expected 'union uip_ipaddr_t *' but argument is of type 'const union uip_ipaddr_t *'
+ CCIF struct uip_conn *tcp_connect(uip_ipaddr_t *ripaddr, uint16_t port,
+                       ^
+-----------------make z1 target:objs/tcpip.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c tcpip.c -o objs/tcpip.o
+-----------------make z1 target:objs/udp-socket.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c udp-socket.c -o objs/udp-socket.o
+udp-socket.c: In function 'process_thread_udp_socket_process':
+udp-socket.c:41:31: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define UIP_IP_BUF   ((struct uip_udpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                               ^
+udp-socket.c:184:33: note: in expansion of macro 'UIP_IP_BUF'
+                               &(UIP_IP_BUF->srcipaddr),
+                                 ^
+In file included from ../icomlib/include/net/tcpip.h:94:0,
+                 from ../icomlib/include/contiki-net.h:39,
+                 from udp-socket.c:32:
+udp-socket.c:41:31: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define UIP_IP_BUF   ((struct uip_udpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                               ^
+../icomlib/include/net/uip.h:1210:53: note: in definition of macro 'UIP_HTONS'
+ #      define UIP_HTONS(n) (uint16_t)((((uint16_t) (n)) << 8) | (((uint16_t) (n)) >> 8))
+                                                     ^
+udp-socket.c:185:41: note: in expansion of macro 'UIP_IP_BUF'
+                               UIP_HTONS(UIP_IP_BUF->srcport),
+                                         ^
+udp-socket.c:41:31: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define UIP_IP_BUF   ((struct uip_udpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                               ^
+../icomlib/include/net/uip.h:1210:79: note: in definition of macro 'UIP_HTONS'
+ #      define UIP_HTONS(n) (uint16_t)((((uint16_t) (n)) << 8) | (((uint16_t) (n)) >> 8))
+                                                                               ^
+udp-socket.c:185:41: note: in expansion of macro 'UIP_IP_BUF'
+                               UIP_HTONS(UIP_IP_BUF->srcport),
+                                         ^
+udp-socket.c:41:31: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define UIP_IP_BUF   ((struct uip_udpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                               ^
+udp-socket.c:186:33: note: in expansion of macro 'UIP_IP_BUF'
+                               &(UIP_IP_BUF->destipaddr),
+                                 ^
+In file included from ../icomlib/include/net/tcpip.h:94:0,
+                 from ../icomlib/include/contiki-net.h:39,
+                 from udp-socket.c:32:
+udp-socket.c:41:31: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define UIP_IP_BUF   ((struct uip_udpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                               ^
+../icomlib/include/net/uip.h:1210:53: note: in definition of macro 'UIP_HTONS'
+ #      define UIP_HTONS(n) (uint16_t)((((uint16_t) (n)) << 8) | (((uint16_t) (n)) >> 8))
+                                                     ^
+udp-socket.c:187:41: note: in expansion of macro 'UIP_IP_BUF'
+                               UIP_HTONS(UIP_IP_BUF->destport),
+                                         ^
+udp-socket.c:41:31: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define UIP_IP_BUF   ((struct uip_udpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                               ^
+../icomlib/include/net/uip.h:1210:79: note: in definition of macro 'UIP_HTONS'
+ #      define UIP_HTONS(n) (uint16_t)((((uint16_t) (n)) << 8) | (((uint16_t) (n)) >> 8))
+                                                                               ^
+udp-socket.c:187:41: note: in expansion of macro 'UIP_IP_BUF'
+                               UIP_HTONS(UIP_IP_BUF->destport),
+                                         ^
+-----------------make z1 target:objs/uip_arp.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c uip_arp.c -o objs/uip_arp.o
+-----------------make z1 target:objs/uip.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c uip.c -o objs/uip.o
+uip.c: In function 'upper_layer_chksum':
+uip.c:353:3: warning: passing argument 2 of 'chksum' from incompatible pointer type [enabled by default]
+   sum = chksum(sum, &ipbuf->data, upper_layer_len);
+   ^
+uip.c:284:1: note: expected 'const uint8_t *' but argument is of type 'U8 (*)[]'
+ chksum(uint16_t sum, const uint8_t *data, uint16_t len)
+ ^
+uip.c: In function 'uip_init':
+uip.c:385:14: warning: assignment from incompatible pointer type [enabled by default]
+   rxBUF.RBUF = &uip_buf[UIP_LLH_LEN];
+              ^
+uip.c: In function 'uip_process':
+uip.c:1043:3: warning: passing argument 1 of 'uip_ipchksum' from incompatible pointer type [enabled by default]
+   if(uip_ipchksum(rxBUF.RBUF) != 0xffff) { /* Compute and check the IP header
+   ^
+uip.c:322:1: note: expected 'U8 *' but argument is of type 'struct uip_tcpip_hdr *'
+ uip_ipchksum(U8 *ipbuf)
+ ^
+uip.c:1064:7: warning: passing argument 2 of 'uip_arp_update' from incompatible pointer type [enabled by default]
+       uip_arp_update(&rxBUF.RBUF->srcipaddr, psrcmac);
+       ^
+In file included from uip.c:77:0:
+../icomlib/include/net/uip_arp.h:161:6: note: expected 'struct uip_eth_addr *' but argument is of type 'U8 *'
+ void uip_arp_update(uip_ipaddr_t *ipaddr, struct uip_eth_addr *ethaddr);
+      ^
+uip.c:1217:3: warning: passing argument 1 of 'uip_udpchksum' from incompatible pointer type [enabled by default]
+   if(rxBUF.RUDPBUF->udpchksum != 0 && uip_udpchksum(rxBUF.RUDPBUF) != 0xffff) {
+   ^
+uip.c:375:1: note: expected 'struct uip_ip_hdr *' but argument is of type 'struct uip_udpip_hdr *'
+ uip_udpchksum(struct uip_ip_hdr *buf)
+ ^
+uip.c:1327:3: warning: passing argument 1 of 'uip_udpchksum' from incompatible pointer type [enabled by default]
+   UDPBUF->udpchksum = ~(uip_udpchksum(UDPBUF));
+   ^
+uip.c:375:1: note: expected 'struct uip_ip_hdr *' but argument is of type 'struct uip_udpip_hdr *'
+ uip_udpchksum(struct uip_ip_hdr *buf)
+ ^
+uip.c:1343:3: warning: passing argument 1 of 'uip_tcpchksum' from incompatible pointer type [enabled by default]
+   if(uip_tcpchksum(rxBUF.RBUF) != 0xffff) {   /* Compute and check the TCP
+   ^
+uip.c:368:1: note: expected 'struct uip_ip_hdr *' but argument is of type 'struct uip_tcpip_hdr *'
+ uip_tcpchksum(struct uip_ip_hdr *buf)
+ ^
+uip.c:2069:3: warning: passing argument 1 of 'uip_tcpchksum' from incompatible pointer type [enabled by default]
+   BUF->tcpchksum = ~(uip_tcpchksum(BUF));
+   ^
+uip.c:368:1: note: expected 'struct uip_ip_hdr *' but argument is of type 'struct uip_tcpip_hdr *'
+ uip_tcpchksum(struct uip_ip_hdr *buf)
+ ^
+uip.c:2088:3: warning: passing argument 1 of 'uip_ipchksum' from incompatible pointer type [enabled by default]
+   BUF->ipchksum = ~(uip_ipchksum(BUF));
+   ^
+uip.c:322:1: note: expected 'U8 *' but argument is of type 'struct uip_tcpip_hdr *'
+ uip_ipchksum(U8 *ipbuf)
+ ^
+uip.c: In function 'uip_send':
+uip.c:2128:0: warning: "MIN" redefined [enabled by default]
+ #define MIN(a,b) ((a) < (b)? (a): (b))
+ ^
+In file included from ../icomlib/include/sys/process.h:57:0,
+                 from ../icomlib/include/contiki.h:41,
+                 from ../icomlib/include/net/tcpip.h:69,
+                 from ../icomlib/include/net/uip.h:122,
+                 from uip.c:75:
+../icomlib/include/sys/cc.h:134:0: note: this is the location of the previous definition
+ #define MIN(n, m)   (((n) < (m)) ? (n) : (m))
+ ^
+-----------------make z1 target:objs/uiplib.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c uiplib.c -o objs/uiplib.o
+-----------------make z1 target:objs/uip-split.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c uip-split.c -o objs/uip-split.o
+uip-split.c: In function 'uip_split_output':
+uip-split.c:44:22: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define BUF ((struct uip_tcpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                      ^
+uip-split.c:63:6: note: in expansion of macro 'BUF'
+   if(BUF->proto == UIP_PROTO_TCP &&
+      ^
+uip-split.c:44:22: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define BUF ((struct uip_tcpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                      ^
+uip-split.c:87:5: note: in expansion of macro 'BUF'
+     BUF->len[0] = uip_len >> 8;
+     ^
+uip-split.c:44:22: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define BUF ((struct uip_tcpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                      ^
+uip-split.c:88:5: note: in expansion of macro 'BUF'
+     BUF->len[1] = uip_len & 0xff;
+     ^
+uip-split.c:44:22: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define BUF ((struct uip_tcpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                      ^
+uip-split.c:91:15: note: in expansion of macro 'BUF'
+     uip_add32(BUF->seqno, tcplen);
+               ^
+uip-split.c:44:22: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define BUF ((struct uip_tcpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                      ^
+uip-split.c:92:5: note: in expansion of macro 'BUF'
+     BUF->seqno[0] = uip_acc32[0];
+     ^
+uip-split.c:44:22: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define BUF ((struct uip_tcpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                      ^
+uip-split.c:93:5: note: in expansion of macro 'BUF'
+     BUF->seqno[1] = uip_acc32[1];
+     ^
+uip-split.c:44:22: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define BUF ((struct uip_tcpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                      ^
+uip-split.c:94:5: note: in expansion of macro 'BUF'
+     BUF->seqno[2] = uip_acc32[2];
+     ^
+uip-split.c:44:22: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define BUF ((struct uip_tcpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                      ^
+uip-split.c:95:5: note: in expansion of macro 'BUF'
+     BUF->seqno[3] = uip_acc32[3];
+     ^
+uip-split.c:44:22: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define BUF ((struct uip_tcpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                      ^
+uip-split.c:98:5: note: in expansion of macro 'BUF'
+     BUF->tcpchksum = 0;
+     ^
+uip-split.c:44:22: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define BUF ((struct uip_tcpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                      ^
+uip-split.c:99:5: note: in expansion of macro 'BUF'
+     BUF->tcpchksum = ~(uip_tcpchksum(BUF));
+     ^
+uip-split.c:44:22: warning: passing argument 1 of 'uip_tcpchksum' from incompatible pointer type [enabled by default]
+ #define BUF ((struct uip_tcpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                      ^
+uip-split.c:99:38: note: in expansion of macro 'BUF'
+     BUF->tcpchksum = ~(uip_tcpchksum(BUF));
+                                      ^
+In file included from uip-split.c:40:0:
+../icomlib/include/net/uip_arch.h:130:10: note: expected 'struct uip_ip_hdr *' but argument is of type 'struct uip_tcpip_hdr *'
+ uint16_t uip_tcpchksum(struct uip_ip_hdr *buf);
+          ^
+uip-split.c:44:22: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define BUF ((struct uip_tcpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                      ^
+uip-split.c:103:5: note: in expansion of macro 'BUF'
+     BUF->ipchksum = 0;
+     ^
+uip-split.c:44:22: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+ #define BUF ((struct uip_tcpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                      ^
+uip-split.c:104:5: note: in expansion of macro 'BUF'
+     BUF->ipchksum = ~(uip_ipchksum(BUF));
+     ^
+uip-split.c:44:22: warning: passing argument 1 of 'uip_ipchksum' from incompatible pointer type [enabled by default]
+ #define BUF ((struct uip_tcpip_hdr *)&uip_buf[UIP_LLH_LEN])
+                      ^
+uip-split.c:104:36: note: in expansion of macro 'BUF'
+     BUF->ipchksum = ~(uip_ipchksum(BUF));
+                                    ^
+In file included from uip-split.c:40:0:
+../icomlib/include/net/uip_arch.h:115:10: note: expected 'U8 *' but argument is of type 'struct uip_tcpip_hdr *'
+ uint16_t uip_ipchksum(U8 *ipbuf);
+          ^
+-----------------make z1 target:objs/uip-udp-packet.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c uip-udp-packet.c -o objs/uip-udp-packet.o
+-----------------make z1 target:objs/ntp_client.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c ntp_client.c -o objs/ntp_client.o
+In file included from ntp_client.c:8:0:
+../icomlib/include/net/ntp_client.h:17:92: warning: backslash and newline separated by space [enabled by default]
+                                       ((data & 0x0000ff00) << 8) | /* left shift 1 byte */ \    
+ ^
+ntp_client.c: In function 'process_thread_ntp_connectPprocess':
+ntp_client.c:215:21: warning: pointer targets in passing argument 2 of 'udprecvfrom' differ in signedness [-Wpointer-sign]
+                     recvlen = udprecvfrom(msg.socket, ntp.buf, MAX_BUFFER, &peeraddr, &peerport);
+                     ^
+In file included from ntp_client.c:5:0:
+../icomlib/include/net/socket_driver.h:155:5: note: expected 'char *' but argument is of type 'U8 *'
+ int udprecvfrom(NETSOCKET socket, char *data, U16 datalen, uip_ipaddr_t *peeraddr, U16 *peerport);
+     ^
+ntp_client.c:218:21: warning: format '%d' expects argument of type 'int', but argument 2 has type 'NETSOCKET' [-Wformat=]
+                     printf("UDP socked:%d recvdata:%s from %d.%d.%d.%d:%d\n", msg.socket, ntp.buf, peeraddr.u8[0], peeraddr.u8[1], peeraddr.u8[2], peeraddr.u8[3], peerport);
+                     ^
+ntp_client.c:221:6: warning: pointer targets in passing argument 1 of 'parse_buff' differ in signedness [-Wpointer-sign]
+      parse_buff(ntp.buf);
+      ^
+ntp_client.c:164:13: note: expected 'char *' but argument is of type 'U8 *'
+ static void parse_buff(char *pbuff)
+             ^
+ntp_client.c:228:21: warning: format '%d' expects argument of type 'int', but argument 2 has type 'NETSOCKET' [-Wformat=]
+                     printf("Illegal socket:%d\n", msg.socket);
+                     ^
+ntp_client.c:201:19: warning: unused variable 'now' [-Wunused-variable]
+     unsigned long now;
+                   ^
+ntp_client.c:198:9: warning: variable 'recvlen' set but not used [-Wunused-but-set-variable]
+     int recvlen;
+         ^
+-----------------make z1 target:objs/httpparse.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__CJSON_SUPPORT__ -D__TUYA_CLOUD_SUPPORT__ -D__CUSTOMER_HXWL__=HXWL -D__CUSTOMER__=HXWL -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_TUYA____ -D__CJSON_SUPPORT__ -D__WIFI_WEATHER__ -D____D_UA_LED_Indicator____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include/net -I../icomlib/include/bsp -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/sys -I../icomlib/include/net/mac -I../icomlib/include/dev -I../icomlib/include -I../icomlib/include/matrixssl -I ../icomapps -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c httpparse.c -o objs/httpparse.o
+httpparse.c: In function 'httpparse_init':
+httpparse.c:190:5: warning: statement with no effect [-Wunused-value]
+     httpreqdata.httpsock != -1;
+     ^
+httpparse.c: In function 'process_thread_http_req_process':
+httpparse.c:227:21: warning: pointer targets in passing argument 2 of 'tcpsend' differ in signedness [-Wpointer-sign]
+                     if (tcpsend(httpreqdata.httpsock, httpreqdata.httpcmd, httpreqdata.cmdlen) < 0)
+                     ^
+In file included from ../icomlib/include/httpparse.h:4:0,
+                 from httpparse.c:2:
+../icomlib/include/net/socket_driver.h:92:5: note: expected 'char *' but argument is of type 'U8 *'
+ int tcpsend(NETSOCKET socket, char *data, U16 datalen);
+     ^
+httpparse.c:230:28: error: 'HX_ERROR_INVALID_SOCK' undeclared (first use in this function)
+       weather_error_code = HX_ERROR_INVALID_SOCK;
+                            ^
+httpparse.c:230:28: note: each undeclared identifier is reported only once for each function it appears in
+httpparse.c:246:5: warning: pointer targets in passing argument 2 of 'tcprecv' differ in signedness [-Wpointer-sign]
+     len = tcprecv(httpreqdata.httpsock, &(httpreqdata.httprsp[httpreqdata.rsplen]), HTTPRSP_MAX - 1 - index);
+     ^
+In file included from ../icomlib/include/httpparse.h:4:0,
+                 from httpparse.c:2:
+../icomlib/include/net/socket_driver.h:104:5: note: expected 'char *' but argument is of type 'U8 *'
+ int tcprecv(NETSOCKET socket, char *data, U16 datalen);
+     ^
+httpparse.c:254:27: error: 'HX_ERROR_UNKOWN' undeclared (first use in this function)
+      weather_error_code = HX_ERROR_UNKOWN;
+                           ^
+httpparse.c: In function 'process_thread_http_nslookup_process':
+httpparse.c:338:4: warning: format '%d' expects argument of type 'int', but argument 2 has type 'NETSOCKET' [-Wformat=]
+    printf("ret sock : %d\n", httpreqdata.httpsock);
+    ^
+httpparse.c:341:26: error: 'HX_ERROR_NO_SOCK' undeclared (first use in this function)
+     weather_error_code = HX_ERROR_NO_SOCK;
+                          ^
+httpparse.c: In function 'http_tcp_connect_server':
+httpparse.c:368:25: error: 'HX_ERROR_UNKOWN' undeclared (first use in this function)
+    weather_error_code = HX_ERROR_UNKOWN;
+                         ^
+httpparse.c:377:3: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'unsigned char *' [-Wformat=]
+   printf("pip = %x\r\n", pip);
+   ^
+httpparse.c:394:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'NETSOCKET' [-Wformat=]
+  printf("ret sock : %d\n", httpreqdata.httpsock);
+  ^
+httpparse.c: In function 'SendGetHttpCmd':
+httpparse.c:588:24: error: 'HX_ERROR_NO_SOCK' undeclared (first use in this function)
+   weather_error_code = HX_ERROR_NO_SOCK;
+                        ^
+httpparse.c:407:7: warning: unused variable 'buffer' [-Wunused-variable]
+  char buffer[128];
+       ^
+httpparse.c: In function 'httprsp_parse':
+httpparse.c:676:7: warning: pointer targets in passing argument 1 of 'get_chunk_size' differ in signedness [-Wpointer-sign]
+       contentlen = get_chunk_size(ptr, p);
+       ^
+httpparse.c:161:12: note: expected 'char *' but argument is of type 'unsigned char *'
+ static int get_chunk_size(char *begin, char *end);
+            ^
+httpparse.c:679:11: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+       ptr = p + 2;
+           ^
+httpparse.c:746:26: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+              httpmsg.rsp = http_content;
+                          ^
+httpparse.c:774:26: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+              httpmsg.rsp = http_content;
+                          ^
+httpparse.c: At top level:
+httpparse.c:792:0: warning: "isblank" redefined [enabled by default]
+ #define isblank(c) ((c) == ' ' || (c) == '\r' || (c) == '\n' || (c) == '\t')
+ ^
+In file included from ../icomlib/include/contiki-conf.h:185:0,
+                 from ../icomlib/include/contiki.h:38,
+                 from ../icomlib/include/contiki-net.h:37,
+                 from httpparse.c:1:
+/usr/arm-none-eabi/include/ctype.h:73:0: note: this is the location of the previous definition
+ #define isblank(__c) \
+ ^
+httpparse.c: In function 'BuildPostBody':
+httpparse.c:856:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+httpparse.c: In function 'http_get_long_latitude':
+httpparse.c:926:2: warning: pointer targets in passing argument 1 of 'cJSON_Parse' differ in signedness [-Wpointer-sign]
+  pRoot = cJSON_Parse(http->rsp);
+  ^
+In file included from httpparse.c:22:0:
+../include/cJSON.h:66:15: note: expected 'const char *' but argument is of type 'U8 *'
+ extern cJSON *cJSON_Parse(const char *value);
+               ^
+httpparse.c: In function 'get_dow':
+httpparse.c:1109:21: warning: initialization from incompatible pointer type [enabled by default]
+  char **ptr_array = week_str;
+                     ^
+httpparse.c:1116:13: warning: assignment from incompatible pointer type [enabled by default]
+   ptr_array = month_str;
+             ^
+httpparse.c: In function 'fill_date_info':
+httpparse.c:1205:2: warning: passing argument 1 of 'get_segment' discards 'const' qualifier from pointer target type [enabled by default]
+  ptr = get_segment(ptr, &begin, &end, ',');
+  ^
+httpparse.c:1131:14: note: expected 'char *' but argument is of type 'const char *'
+ static char *get_segment(char *ptr, char **p_begin, char **p_end, int c)
+              ^
+httpparse.c:1214:2: warning: passing argument 1 of 'get_segment' discards 'const' qualifier from pointer target type [enabled by default]
+  ptr = get_segment(ptr, &begin, &end, ' ');
+  ^
+httpparse.c:1131:14: note: expected 'char *' but argument is of type 'const char *'
+ static char *get_segment(char *ptr, char **p_begin, char **p_end, int c)
+              ^
+httpparse.c:1221:2: warning: passing argument 1 of 'get_segment' discards 'const' qualifier from pointer target type [enabled by default]
+  ptr = get_segment(ptr, &begin, &end, ' ');
+  ^
+httpparse.c:1131:14: note: expected 'char *' but argument is of type 'const char *'
+ static char *get_segment(char *ptr, char **p_begin, char **p_end, int c)
+              ^
+httpparse.c:1228:2: warning: passing argument 1 of 'get_segment' discards 'const' qualifier from pointer target type [enabled by default]
+  ptr = get_segment(ptr, &begin, &end, ' ');
+  ^
+httpparse.c:1131:14: note: expected 'char *' but argument is of type 'const char *'
+ static char *get_segment(char *ptr, char **p_begin, char **p_end, int c)
+              ^
+httpparse.c:1235:2: warning: passing argument 1 of 'get_segment' discards 'const' qualifier from pointer target type [enabled by default]
+  ptr = get_segment(ptr, &begin, &end, ' ');
+  ^
+httpparse.c:1131:14: note: expected 'char *' but argument is of type 'const char *'
+ static char *get_segment(char *ptr, char **p_begin, char **p_end, int c)
+              ^
+httpparse.c:1246:2: warning: passing argument 1 of 'get_segment' discards 'const' qualifier from pointer target type [enabled by default]
+  ptr = get_segment(ptr, &begin, &end, ' ');
+  ^
+httpparse.c:1131:14: note: expected 'char *' but argument is of type 'const char *'
+ static char *get_segment(char *ptr, char **p_begin, char **p_end, int c)
+              ^
+httpparse.c:1200:8: warning: unused variable 'p' [-Wunused-variable]
+  char *p;
+        ^
+httpparse.c: In function 'get_utc_datetime':
+httpparse.c:1270:3: warning: 'return' with a value, in function returning void [enabled by default]
+   return FALSE;
+   ^
+httpparse.c:1277:3: warning: 'return' with a value, in function returning void [enabled by default]
+   return FALSE;
+   ^
+httpparse.c:1283:2: warning: array subscript has type 'char' [-Wchar-subscripts]
+  while (isdigit(*ptr))
+  ^
+httpparse.c:1291:3: warning: 'return' with a value, in function returning void [enabled by default]
+   return FALSE;
+   ^
+httpparse.c:1297:2: warning: 'return' with a value, in function returning void [enabled by default]
+  return TRUE; 
+  ^
+httpparse.c: In function 'http_get_weather':
+httpparse.c:1361:2: warning: pointer targets in passing argument 1 of 'cJSON_Parse' differ in signedness [-Wpointer-sign]
+  pRoot = cJSON_Parse(http->rsp);
+  ^
+In file included from httpparse.c:22:0:
+../include/cJSON.h:66:15: note: expected 'const char *' but argument is of type 'U8 *'
+ extern cJSON *cJSON_Parse(const char *value);
+               ^
+httpparse.c:1365:24: error: 'HX_ERROR_JSON_FORMAT' undeclared (first use in this function)
+   weather_error_code = HX_ERROR_JSON_FORMAT;
+                        ^
+httpparse.c:1372:24: error: 'HX_ERROR_NO_INFO' undeclared (first use in this function)
+   weather_error_code = HX_ERROR_NO_INFO;
+                        ^
+httpparse.c: In function 'fill_at_rsp_string':
+httpparse.c:1645:24: error: 'HX_ERROR_NO_MEMORY' undeclared (first use in this function)
+   weather_error_code = HX_ERROR_NO_MEMORY;
+                        ^
+httpparse.c:1669:24: error: 'HX_ERROR_SUCCESS' undeclared (first use in this function)
+   weather_error_code = HX_ERROR_SUCCESS;
+                        ^
+httpparse.c: In function 'process_thread_http_poll_weather_thread':
+httpparse.c:1773:12: warning: unused variable 'msg' [-Wunused-variable]
+  SOCKETMSG msg;
+            ^
+httpparse.c: At top level:
+httpparse.c:125:12: warning: 'GetRspCode' declared 'static' but never defined [-Wunused-function]
+ static int GetRspCode(char *str);
+            ^
+httpparse.c:126:16: warning: 'GetMsgIds' declared 'static' but never defined [-Wunused-function]
+ static Boolean GetMsgIds(char *buff);
+                ^
+httpparse.c:127:14: warning: 'GetObject' declared 'static' but never defined [-Wunused-function]
+ static char *GetObject(char *buff, int *plen, int start_char);
+              ^
+httpparse.c:128:14: warning: 'GetObjectFromJson' declared 'static' but never defined [-Wunused-function]
+ static char *GetObjectFromJson(char *buff, int *plen, int start_char);
+              ^
+httpparse.c:160:12: warning: 'http_ncount' defined but not used [-Wunused-variable]
+ static int http_ncount;
+            ^
+httpparse.c:854:14: warning: 'BuildPostBody' defined but not used [-Wunused-function]
+ static char *BuildPostBody(pair_t *array)
+              ^
+make[2]: *** [objs/httpparse.o] Error 1
+make[2]: Leaving directory `/home/qin/projects/latest/Release_v1127/contikilib'
+make[1]: *** [all] Error 2
+make[1]: Leaving directory `/home/qin/projects/latest/Release_v1127/contikilib'
+make: *** [all] Error 2

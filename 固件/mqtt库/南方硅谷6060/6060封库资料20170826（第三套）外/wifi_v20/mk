@@ -1,0 +1,18 @@
+#!/bin/sh
+
+export iRCVer=$(svn info | grep Revision | cut -f2 -d' ')
+#export RCVer=SV_$(svn info | grep Revision | cut -f2 -d' ')
+
+echo "#define  D_iRCVer  $iRCVer" > ./include/uRCVer.h
+echo "#define  D_szRCVer  \"SV_$iRCVer\"" >> ./include/uRCVer.h
+
+
+export BuildTime=$(date +'%Y%m%d_%H%M%S')
+echo "#define  D_szBuildTime  \"$BuildTime\"" >> ./include/uRCVer.h
+
+export BuildTimeSec=$(date +%s)
+echo "#define  D_dwBuildTimeSec  $BuildTimeSec" >> ./include/uRCVer.h
+
+rm -f ./icomapps/objs/UAVersion.o
+#make clean
+make | tee build.txt

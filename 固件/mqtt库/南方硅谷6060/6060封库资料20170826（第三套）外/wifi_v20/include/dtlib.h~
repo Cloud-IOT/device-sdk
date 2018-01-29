@@ -1,0 +1,48 @@
+#ifndef _DT_LIB_H_
+#define _DT_LIB_H_
+
+
+
+
+typedef void (*user_recv_callback_t)(dt_u8 *data, dt_u16 len);
+typedef void (*user_send_callback_t)(void);
+typedef void (*user_disconnect_callback_t)(void);
+
+
+typedef struct 
+{
+	user_recv_callback_t recv_callback;
+	user_send_callback_t user_send_callback;
+	user_disconnect_callback_t user_disconnect_callback;
+}user_callback_t;
+
+typedef struct 
+{
+	dt_u8  mac[6];
+	dt_u8  ip[4];
+	dt_u16 type_value;
+}wifi_station_info_t;
+
+
+#define ERROR_SOCKET_CREATE     (-2)
+#define ERROR_PASS_PARAM        (-1)
+#define SUCCESS                 (1)
+
+
+
+/**********************************custom  param***************************************/
+#define MAX_BUF_SIZE_FOR_SZ_CLOUD_LIB   256
+#define CLOUD_SERVER_IP                 "120.24.55.58"
+//#define debug_level                     0xff
+
+
+/****************************************************************************************/
+
+
+
+int dt_system_param_init(wifi_station_info_t *wifi_station_info);
+
+int dt_start_udp_server(void);
+
+
+#endif

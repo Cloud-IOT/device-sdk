@@ -1,0 +1,151 @@
+make -C icomlib
+make[1]: Entering directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/icomlib'
+make icomlib.a
+make[2]: Entering directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/icomlib'
+make[2]: `icomlib.a' is up to date.
+make[2]: Leaving directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/icomlib'
+make[1]: Leaving directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/icomlib'
+make -C icomapps
+make[1]: Entering directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/icomapps'
+rm -f 
+make icomapps.a
+make[2]: Entering directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/icomapps'
+-----------------make z1 target:objs/szcloud/szcloud_intf.o -----------------
+arm-none-eabi-gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__SZCLOUD_SUPPORT__ -D__CUSTOMER_SZ__=SZ -D__CUSTOMER__=SZ -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_SZCLOUD____ -D____D_UA_KEY_DEMO_SUPPORT____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I../include -I../icomlib/include  -I../icomlib/include/sys -I../icomlib/include/dev -I../icomlib/include/net -I../icomlib/include/net/mac -I../icomlib/include/net/ieee80211_bss -I../icomlib/include/matrixssl  -I../icomlib/include/cloud -I../contikilib -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DFUNC_OTA_ON=1 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -DENABLE_ICOMM_DEMO=0 -DFUNC_CLOUD_ON=0 -DFUNC_SEND_RAW_DATA_ON=0 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -c szcloud/szcloud_intf.c -o objs/szcloud/szcloud_intf.o
+echo "ar rcf icomapps.a objs/atcmd_mqtt.o objs/atcmd.o objs/atcmd_ssl.o objs/bsp_info.o objs/data_buff.o objs/esp_8266_smart_link.o objs/hf_smart_link.o objs/hx_flash_opt.o objs/hx_sta_conn.o objs/hx_udp_client.o objs/hx_udp_server.o objs/iperf_cmd.o objs/key.o objs/MyATCmd.o objs/MyCustSave.o objs/MyThread.o objs/net.o objs/ota_api.o objs/sk_timer.o objs/sk_timer_task.o objs/socket_app.o objs/soft_ap_init.o objs/tcp_server_demo.o objs/UAMisc.o objs/uart.o objs/UAVersion.o objs/wifi_uart_demo.o objs/xmem.o objs/szcloud/szcloud_intf.o objs/szcloud/szcloud_uart.o (LNK_LIB) objs/atcmd.o objs/atcmd_ssl.o objs/atcmd_mqtt.o objs/bsp_info.o objs/iperf_cmd.o objs/socket_app.o objs/soft_ap_init.o objs/xmem.o objs/ota_api.o objs/szcloud/szcloud_intf.o objs/szcloud/szcloud_uart.o"
+ar rcf icomapps.a objs/atcmd_mqtt.o objs/atcmd.o objs/atcmd_ssl.o objs/bsp_info.o objs/data_buff.o objs/esp_8266_smart_link.o objs/hf_smart_link.o objs/hx_flash_opt.o objs/hx_sta_conn.o objs/hx_udp_client.o objs/hx_udp_server.o objs/iperf_cmd.o objs/key.o objs/MyATCmd.o objs/MyCustSave.o objs/MyThread.o objs/net.o objs/ota_api.o objs/sk_timer.o objs/sk_timer_task.o objs/socket_app.o objs/soft_ap_init.o objs/tcp_server_demo.o objs/UAMisc.o objs/uart.o objs/UAVersion.o objs/wifi_uart_demo.o objs/xmem.o objs/szcloud/szcloud_intf.o objs/szcloud/szcloud_uart.o (LNK_LIB) objs/atcmd.o objs/atcmd_ssl.o objs/atcmd_mqtt.o objs/bsp_info.o objs/iperf_cmd.o objs/socket_app.o objs/soft_ap_init.o objs/xmem.o objs/ota_api.o objs/szcloud/szcloud_intf.o objs/szcloud/szcloud_uart.o
+ar rcf icomapps.a objs/atcmd_mqtt.o objs/atcmd.o objs/atcmd_ssl.o objs/bsp_info.o objs/data_buff.o objs/esp_8266_smart_link.o objs/hf_smart_link.o objs/hx_flash_opt.o objs/hx_sta_conn.o objs/hx_udp_client.o objs/hx_udp_server.o objs/iperf_cmd.o objs/key.o objs/MyATCmd.o objs/MyCustSave.o objs/MyThread.o objs/net.o objs/ota_api.o objs/sk_timer.o objs/sk_timer_task.o objs/socket_app.o objs/soft_ap_init.o objs/tcp_server_demo.o objs/UAMisc.o objs/uart.o objs/UAVersion.o objs/wifi_uart_demo.o objs/xmem.o objs/szcloud/szcloud_intf.o objs/szcloud/szcloud_uart.o objs/atcmd.o objs/atcmd_ssl.o objs/atcmd_mqtt.o objs/bsp_info.o objs/iperf_cmd.o objs/socket_app.o objs/soft_ap_init.o objs/xmem.o objs/ota_api.o objs/szcloud/szcloud_intf.o objs/szcloud/szcloud_uart.o
+make[2]: Leaving directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/icomapps'
+make[1]: Leaving directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/icomapps'
+make -C contikilib
+make[1]: Entering directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/contikilib'
+make contikilib.a
+make[2]: Entering directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/contikilib'
+make[2]: `contikilib.a' is up to date.
+make[2]: Leaving directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/contikilib'
+make[1]: Leaving directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/contikilib'
+make -C dllapps
+make[1]: Entering directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/dllapps'
+make dll.elf 
+make[2]: Entering directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/dllapps'
+make[2]: `dll.elf' is up to date.
+make[2]: Leaving directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/dllapps'
+make[1]: Leaving directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/dllapps'
+#make -C user_files
+make ssv6060-main.bin
+make[1]: Entering directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20'
+# WARNING: if you need math.h. You need to add -lm into this linking stage.Please reference where -lm being added
+#arm-none-eabi-gcc --specs=nosys.specs --specs=nano.specs -flto -Wl,-Tcabrio.lds -flto -Xlinker -M -Xlinker -Map=contiki-cabrio.map -nostartfiles boot.s relocate.s -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__SZCLOUD_SUPPORT__ -D__CUSTOMER_SZ__=SZ -D__CUSTOMER__=SZ -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_SZCLOUD____ -D____D_UA_KEY_DEMO_SUPPORT____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I./icomlib/include -I./icomlib/include/net -I./icomlib/include/bsp -I./icomlib/include/net/ieee80211_bss -I./icomlib/include/sys -I./icomlib/include/net/mac -I./icomlib/include/dev  -I./icomlib/include/matrixssl -I./include -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -DAUTOSTART_ENABLE ssv6060-main.o relocate.s icomlib/icomlib.a icomapps/icomapps.a contikilib/contikilib.a -lc icomlib/icomlib.a icomapps/icomapps.a contikilib/contikilib.a -lm -o ssv6060-main.elf -L ./thirdPartyLib -lairkiss
+#/bin/cp user_files/libdtlib.a .
+/bin/cp icomlib/icomlib.a . ### use cp to copy library or the linker script will have problem for hierachy issue ###
+/bin/cp icomapps/icomapps.a . ### use cp to copy library or the linker script will have problem for hierachy issue ###
+/bin/cp contikilib/contikilib.a . ### use cp to copy library or the linker script will have problem for hierachy issue ###
+arm-none-eabi-gcc --specs=nosys.specs --specs=nano.specs -flto -Wl,-Tcabrio.lds -flto -Xlinker -M -Xlinker -Map=contiki-cabrio.map -nostartfiles boot.s relocate.s -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__SZCLOUD_SUPPORT__ -D__CUSTOMER_SZ__=SZ -D__CUSTOMER__=SZ -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_SZCLOUD____ -D____D_UA_KEY_DEMO_SUPPORT____ -D____D_Module_IO_Indicator____ -Wall -Wno-trigraphs -fno-builtin -I./icomlib/include -I./icomlib/include/net -I./icomlib/include/bsp -I./icomlib/include/net/ieee80211_bss -I./icomlib/include/sys -I./icomlib/include/net/mac -I./icomlib/include/dev  -I./icomlib/include/matrixssl -I./include -Os -fomit-frame-pointer -g -march=armv3m -mno-thumb-interwork -fdata-sections -ffunction-sections -DMODULE_ID=5 -DBOOT_SECTOR_UPDATE=0 -DDISABLE_ICOMM_DISCOVER=0 -Werror=implicit-function-declaration -Werror=maybe-uninitialized -DAUTOSTART_ENABLE ssv6060-main.o icomlib.a icomapps.a contikilib.a icomlib.a  -o ssv6060-main.elf -L ./thirdPartyLib -lairkiss -ldtlib
+echo "LAST_PROJECT = UA402_SZCLOUD" > ./Prj.tmp
+rm -f ssv6060_mac.hex
+make[2]: Entering directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/util'
+./gen_mac_bin.exe 90-22-33-44-55-66
+create hex file
+
+MAC addr:90-22-33-44-55-66
+make[2]: Leaving directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/util'
+-----------------make 3 target:ssv6060-main.bin 1st-dep:ssv6060-main.elf -----------------
+arm-none-eabi-objcopy -O binary ssv6060-main.elf ssv6060-main.bin
+-e 
+-----Check bin file size:(ssv6060-main.bin)----->>>
+echo test `stat -c %s ssv6060-main.bin` -lt 475136	###acceptable if < 475136###
+test 405200 -lt 475136
+test `stat -c %s ssv6060-main.bin` -lt 475136	###acceptable if < 475136###
+-----Done:bin file size:ok-----<<<
+-----Generate bin for uart-upgrade-----
+dd skip=16384 if=ssv6060-main.bin of=ssv6060-main_os.bin bs=1
+dd skip=0 count=8192 if=ssv6060-main.bin of=boot_tmp.bin bs=1
+cat boot_tmp.bin ssv6060_mac.hex ssv6060-main_os.bin > ssv6060-main.bin
+<----------------------check sram usage---------------------->(read dump.log by ./util/rpt_sram_usage.pl)
+Idx Name          Size      VMA       LMA
+  2 prog_in_sram  00016a38  02000000  0304ae64  00060000  2**2
+  3 .ARM          00000008  02016a38  0306189c  00076a38  2**2
+  4 .data         00001628  02016a40  030618a8  00076a40  2**3
+  5 .bss          0000d6a0  02018070  03062ed8  00078068  2**4
+  6 boot_in_sram  00000d40  02029000  03000190  00009000  2**2
+  7 .boot_data    00000010  0202c000  03000ed0  0000c000  2**2
+  8 .boot_bss     00001400  0202c010  03000ee0  0000c010  2**2
+
+-------------------------SRAM report-------------------------
+sram total  ----------->   192 KB
+sram in use ----------->   158 KB
+sram free   ----------->    29 KB
+
+
+-rwxrwxr-x 1 user user  405200 Sep 13 16:36 ssv6060-main.bin
+-rwxrwxr-x 1 user user 1910486 Sep 13 16:36 ssv6060-main.elf
+make[2]: Entering directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20'
+make[3]: Entering directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/util'
+echo CFLAGS = -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__SZCLOUD_SUPPORT__ -D__CUSTOMER_SZ__=SZ -D__CUSTOMER__=SZ -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_SZCLOUD____ -D____D_UA_KEY_DEMO_SUPPORT____ -D____D_Module_IO_Indicator____ -I../core/sys/ -I../platform/cabrio-e -I../core/net -I../core -I../include -I../cpu/cabrio-e
+CFLAGS = -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__SZCLOUD_SUPPORT__ -D__CUSTOMER_SZ__=SZ -D__CUSTOMER__=SZ -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_SZCLOUD____ -D____D_UA_KEY_DEMO_SUPPORT____ -D____D_Module_IO_Indicator____ -I../core/sys/ -I../platform/cabrio-e -I../core/net -I../core -I../include -I../cpu/cabrio-e
+gcc -D____D_OS_ConTiki____ -DDEBUG_VERSION -D____D_uRan_Macro_Dbg_En____ -D____D_Dev_IOT____ -D____D_uRan_Macro_Dbg_WithTime____ -D____D_ATCmd_UARTSendData____ -D__SZCLOUD_SUPPORT__ -D__CUSTOMER_SZ__=SZ -D__CUSTOMER__=SZ -D____D_Project_UA402_STYLE____ -D____D_Project_UA402_SZCLOUD____ -D____D_UA_KEY_DEMO_SUPPORT____ -D____D_Module_IO_Indicator____ -I../core/sys/ -I../platform/cabrio-e -I../core/net -I../core -I../include -I../cpu/cabrio-e print_layout.c -DMODULE_ID=5 -DFUNC_OTA_ON=1 -DCFG_FLASH_SIZE=1048576 -DCFG_BOOT_SECTOR_SIZE=8192 -DCFG_MP_SIZE=4096 -DCFG_CONFIG_SIZE=4096 -DCFG_IMAGE0_SIZE=475136  -DCFG_IMAGE1_SIZE=475136 -DCFG_CUSTOMER_SIZE=16384 -DCFG_FILE_SYSTEM_SIZE=65536 -o print_layout.exe
+
+<FLASH layout>
+FUNC_OTA_ON = 1
+TOTAL FLASH SIZE = 1024 KB
+----------------------------------------
+|                                      |
+|       BOOT_SECTOR ADDR = 0x3000000   | 
+|       SIZE = 8(KB)                   | 
+----------------------------------------
+|                                      |
+|       MP ADDR = 0x3002000            | 
+|       SIZE = 4(KB)                   | 
+----------------------------------------
+|                                      |
+|       CONFIG ADDR = 0x3003000        | 
+|       SIZE = 4(KB)                   | 
+----------------------------------------
+|                                      |
+|       IMAGE0 ADDR = 0x3004000        | 
+|       SIZE = 464(KB)                 | 
+----------------------------------------
+|                                      |
+|       IMAGE1 ADDR = 0x3078000        | 
+|       SIZE = 464(KB)                 | 
+----------------------------------------
+|                                      |
+|       CUSTOMER ADDR = 0x30ec000      | 
+|       SIZE = 16(KB)                  | 
+----------------------------------------
+|                                      |
+|       FILE_SYSTEM ADDR = 0x30f0000   | 
+|       SIZE = 64(KB)                  | 
+----------------------------------------
+
+<SRAM layout>
+TOTAL_SRAM_SIZE = 192 KB
+----------------------------------------
+|                                      |
+|       BOOT SECTOR ADDR = 0x2000000   | 
+|       SIZE = 4(KB)                   | 
+----------------------------------------
+|                                      |
+|       OS ADDR = 0x2001000            | 
+|       SIZE = 181(KB)                 | 
+----------------------------------------
+|                                      |
+|       NORMAL STACK ADDR = 0x202e780  | 
+|       SIZE = 4(KB)                   | 
+----------------------------------------
+|                                      |
+|       IRQ STACK ADDR = 0x202f780     | 
+|       SIZE = 1(KB)                   | 
+----------------------------------------
+make[3]: Leaving directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20/util'
+make[2]: Leaving directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20'
+make[2]: Entering directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20'
+make[2]: Leaving directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20'
+#############################################################
+### You can use 'make asm' to generate dis-assembly file!!###
+#############################################################
+Wed Sep 13 16:36:48 CST 2017
+Project = UA402_SZCLOUD - Debug
+-----------------------------------
+Done!
+make[1]: Leaving directory `/home/user/Desktop/wifi_szcloud_sdk_lib_0913/wifi_szcloud_sdk_20170802_new/wifi_v20'
